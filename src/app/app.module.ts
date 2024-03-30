@@ -11,6 +11,8 @@ import { BrowseComponent } from './pages/browse/browse.component';
 import { LoginComponent } from './pages/login/login.component';
 import { MovieCarouselComponent } from './shared/components/movie-carousel/movie-carousel.component';
 import { NgFor } from '@angular/common';
+import { DescriptionPipe } from './shared/pipes/description.pipe';
+import { ImagePipe } from './shared/pipes/image.pipe';
 
 
 
@@ -23,6 +25,8 @@ import { NgFor } from '@angular/common';
     LoginComponent,
     BrowseComponent,
     MovieCarouselComponent,
+    DescriptionPipe,
+    ImagePipe,
   ],
   imports: [BrowserModule, AppRoutingModule, NgFor, HttpClientModule],
   providers: [],

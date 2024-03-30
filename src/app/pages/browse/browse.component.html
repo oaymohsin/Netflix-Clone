@@ -1,3 +1,13 @@
 <app-header></app-header>
 <app-banner></app-banner>
-<app-movie-carousel [VideoContents]="movies" [title]="'Popular on Netflix'"></app-movie-carousel>
+<app-movie-carousel [title]="'Popular on Netflix'" [VideoContents]="movies"></app-movie-carousel> 
+
+<app-movie-carousel [title]="'Trending TV shows'" [VideoContents]="tvShows"></app-movie-carousel> 
+
+<app-movie-carousel [title]="'Now Playing Movies'" [VideoContents]="nowPlayingMovies"></app-movie-carousel> 
+
+<app-movie-carousel [title]="'Popular Movies'" [VideoContents]="popularMovies"></app-movie-carousel> 
+
+<app-movie-carousel [title]="'Top Rated Movies'" [VideoContents]="topRatedMovies"></app-movie-carousel> 
+
+<app-movie-carousel [title]="'Upcoming Movies'" [VideoContents]="upcomingMovies"></app-movie-carousel> 
