@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BannerComponent } from './core/banner/banner.component';
@@ -13,7 +13,7 @@ import { MovieCarouselComponent } from './shared/components/movie-carousel/movie
 import { NgFor } from '@angular/common';
 import { DescriptionPipe } from './shared/pipes/description.pipe';
 import { ImagePipe } from './shared/pipes/image.pipe';
-
+import { trigger, transition, animate, style } from '@angular/animations';
 
 
 
@@ -27,9 +27,11 @@ import { ImagePipe } from './shared/pipes/image.pipe';
     MovieCarouselComponent,
     DescriptionPipe,
     ImagePipe,
+    
   ],
-  imports: [BrowserModule, AppRoutingModule, NgFor, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, NgFor, HttpClientModule ,BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
+  
 })
 export class AppModule {}

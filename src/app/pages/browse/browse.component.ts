@@ -73,7 +73,7 @@ export class BrowseComponent implements OnInit {
         this.nowPlayingMovies = res.nowPlayingMovies.results as IVideoContent[];
         this.upcomingMovies = res.upcomingMovies.results as IVideoContent[];
         this.popularMovies = res.popularMovies.results as IVideoContent[];
-        this.topRatedMovies = res.upcomingMovies.results as IVideoContent[];
+        this.topRatedMovies = res.topRatedMovies.results as IVideoContent[];
       });
 
       console.log(this.movies)
