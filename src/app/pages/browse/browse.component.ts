@@ -11,7 +11,7 @@ import { MovieService } from 'src/app/shared/movie.service';
 export class BrowseComponent implements OnInit {
   movies: IVideoContent[] = [];
   tvShows: IVideoContent[] = [];
-  ratedMovies: IVideoContent[] = [];
+  // ratedMovies: IVideoContent[] = [];
   nowPlayingMovies: IVideoContent[] = [];
   popularMovies: IVideoContent[] = [];
   topRatedMovies: IVideoContent[] = [];
@@ -69,11 +69,11 @@ export class BrowseComponent implements OnInit {
         console.log(res)
         this.movies = res.movies.results as IVideoContent[];
         this.tvShows = res.tvShows.results as IVideoContent[];
-        this.ratedMovies = res.ratedMovies.results as IVideoContent[];
-        this.nowPlayingMovies = res.nowPlaying.results as IVideoContent[];
-        this.upcomingMovies = res.upcoming.results as IVideoContent[];
-        this.popularMovies = res.popular.results as IVideoContent[];
-        this.topRatedMovies = res.topRated.results as IVideoContent[];
+        // this.ratedMovies = res.ratedMovies.results as IVideoContent[];
+        this.nowPlayingMovies = res.nowPlayingMovies.results as IVideoContent[];
+        this.upcomingMovies = res.upcomingMovies.results as IVideoContent[];
+        this.popularMovies = res.popularMovies.results as IVideoContent[];
+        this.topRatedMovies = res.upcomingMovies.results as IVideoContent[];
       });
 
       console.log(this.movies)
