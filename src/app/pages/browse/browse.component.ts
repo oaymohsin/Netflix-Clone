@@ -20,7 +20,6 @@ export class BrowseComponent implements OnInit {
   sources = [
     this.movieService.getMovies(),
     this.movieService.getTvShows(),
-    this.movieService.getRatedMovies(),
     this.movieService.getNowPlayingMovies(),
     this.movieService.getUpcomingMovies(),
     this.movieService.getPopularMovies(),
@@ -34,7 +33,14 @@ export class BrowseComponent implements OnInit {
     //   this.movies=response.results;
     // })
 
+    // this.movieService.getTvShows().subscribe((response:any)=>{
+    //   this.tvShows=response.results;
+    // })
 
+
+    //  this.movieService.getRatedMovies().subscribe((response:any)=>{
+    //   this.tvShows=response.results;
+    // })
 
 
     forkJoin(this.sources)
@@ -43,7 +49,6 @@ export class BrowseComponent implements OnInit {
           ([
             movies,
             tvShows,
-            ratedMovies,
             nowPlayingMovies,
             popularMovies,
             topRatedMovies,
@@ -52,7 +57,6 @@ export class BrowseComponent implements OnInit {
             return {
               movies,
               tvShows,
-              ratedMovies,
               nowPlayingMovies,
               popularMovies,
               topRatedMovies,
@@ -62,6 +66,7 @@ export class BrowseComponent implements OnInit {
         )
       )
       .subscribe((res: any) => {
+        console.log(res)
         this.movies = res.movies.results as IVideoContent[];
         this.tvShows = res.tvShows.results as IVideoContent[];
         this.ratedMovies = res.ratedMovies.results as IVideoContent[];
@@ -70,5 +75,8 @@ export class BrowseComponent implements OnInit {
         this.popularMovies = res.popular.results as IVideoContent[];
         this.topRatedMovies = res.topRated.results as IVideoContent[];
       });
+
+      console.log(this.movies)
+      console.log(this.tvShows)
   }
 }
