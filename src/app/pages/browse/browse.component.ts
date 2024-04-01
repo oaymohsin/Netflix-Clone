@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { forkJoin, map } from 'rxjs';
+import { Observable, forkJoin, map } from 'rxjs';
 import { IVideoContent } from 'src/app/shared/models/video-content.interface';
 import { MovieService } from 'src/app/shared/movie.service';
 
@@ -16,6 +16,9 @@ export class BrowseComponent implements OnInit {
   popularMovies: IVideoContent[] = [];
   topRatedMovies: IVideoContent[] = [];
   upcomingMovies: IVideoContent[] = [];
+
+  bannerDetail$ = new Observable<any>();
+  bannerVideo$ = new Observable<any>();
 
   sources = [
     this.movieService.getMovies(),
@@ -54,6 +57,9 @@ export class BrowseComponent implements OnInit {
             topRatedMovies,
             upcomingMovies,
           ]) => {
+
+            this.bannerDetail$ = this.movieService.getBannerDetail(movies.results[1].id);
+            this.bannerVideo$ = this.movieService.getBannerVideo(movies.results[1].id);
             return {
               movies,
               tvShows,
