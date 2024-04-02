@@ -40,6 +40,12 @@ export class MovieCarouselComponent implements OnInit,AfterViewInit {
       centeredSlides:true,
       loop:true,
       breakpoints: {
+        400: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 2,
+          centeredSlides: true,
+        },
         600: {
           slidesPerView: 2,
           slidesPerGroup: 2,

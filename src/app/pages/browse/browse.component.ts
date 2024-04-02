@@ -58,8 +58,8 @@ export class BrowseComponent implements OnInit {
             upcomingMovies,
           ]) => {
 
-            this.bannerDetail$ = this.movieService.getBannerDetail(movies.results[1].id);
-            this.bannerVideo$ = this.movieService.getBannerVideo(movies.results[1].id);
+            this.bannerDetail$ = this.movieService.getBannerDetail(movies.results[2].id);
+            this.bannerVideo$ = this.movieService.getBannerVideo(movies.results[2].id);
             return {
               movies,
               tvShows,
