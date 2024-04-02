@@ -49,7 +49,7 @@ export class MovieCarouselComponent implements OnInit,AfterViewInit {
         600: {
           slidesPerView: 2,
           slidesPerGroup: 2,
-          spaceBetween: 5,
+          spaceBetween: 2,
           centeredSlides: true,
         },
         900: {
