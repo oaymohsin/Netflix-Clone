@@ -9,6 +9,7 @@ import { MovieService } from 'src/app/shared/movie.service';
   styleUrls: ['./browse.component.scss'],
 })
 export class BrowseComponent implements OnInit {
+  userProfileImg = JSON.parse(sessionStorage.getItem("loggedInUser")!).picture;
   movies: IVideoContent[] = [];
   tvShows: IVideoContent[] = [];
   // ratedMovies: IVideoContent[] = [];

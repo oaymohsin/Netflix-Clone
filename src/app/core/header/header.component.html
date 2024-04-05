@@ -10,10 +10,10 @@
   <!-- welcome user | profile image | sign out -->
   <div class="text-white flex items-center md:gap-4">
     <div class="md:flex flex items-center md:gap-2">
-      <a class="hidden md:block" href="">Welcome <strong>Mohsin</strong></a>
-      <img width="42" class="rounded-full" src="/assets/mohsin zaherrrrr.jpg" alt="user-img" />
+      <a class="hidden md:block" href="">Welcome <strong>{{userName}}</strong></a>
+      <img width="42" class="rounded-full" [src]="usersImg " alt="user-img" />
     </div>
     &nbsp; | &nbsp;
-    <a href="">SignOut</a>
+    <a href="" (click)="signOut()">SignOut</a>
   </div>
 </header>
